@@ -8,11 +8,6 @@ public class Ponto {
         this.y = x;
     }
 
-    public Ponto(int limite){
-        this.x = rand.nextDouble(limite);
-        this.y = rand.nextDouble(limite);
-    }
-
     public double calculaDistancia(Ponto p){
         return ( Math.sqrt( (x - p.x) + (y - p.y) ) );
     }
