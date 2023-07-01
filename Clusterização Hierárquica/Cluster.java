@@ -30,6 +30,10 @@ public class Cluster {
         return size;
     }
 
+    public String imprimeCentroide(){
+        return centroide.toString();
+    }
+
     public void atualizaCentroide(){
 
         double sumX = 0;
@@ -50,6 +54,6 @@ public class Cluster {
 
     public double calculaDistancia(Cluster c){
 
-        return ( this.centroide.calculaDistancia(c.centroide) );
+        return centroide.calculaDistancia(c.centroide);
     }
 }
