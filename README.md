@@ -1,2 +1,2 @@
-# Estrutura-de-Dados
-Repositório para a matéria EDD da faculdade
+# Trabalho final de Estrutura de Dados I
+Algoritmo de Clusterizacão Hierárquica 
