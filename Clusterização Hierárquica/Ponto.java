@@ -5,11 +5,11 @@ public class Ponto {
 
     public Ponto(double x, double y){
         this.x = x;
-        this.y = x;
+        this.y = y;
     }
 
     public double calculaDistancia(Ponto p){
-        return ( Math.sqrt( (x - p.x) + (y - p.y) ) );
+        return Math.sqrt( Math.abs( (x - p.x) + (y - p.y) ) );
     }
 
     public Ponto retornaMedia(Ponto p){
@@ -26,5 +26,9 @@ public class Ponto {
 
     public double getY(){
         return y;
+    }
+
+    public String toString(){
+        return "(" + x + "," + y + ")";
     }
 }
