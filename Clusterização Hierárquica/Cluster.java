@@ -1,8 +1,8 @@
 public class Cluster {
     
-    public Ponto pontos[];
-    public Ponto centroide;
-    public int size;
+    private Ponto pontos[];
+    private Ponto centroide;
+    private int size;
 
     public Cluster(Ponto p){
 
@@ -23,18 +23,22 @@ public class Cluster {
         for (int i = c1.size, j = 0; j < c2.size; i++, j++) 
             this.pontos[i] = c2.pontos[j];
         
-        atualizaCentroide();
+        calculaCentroide();
     }
 
     public int getSize(){
         return size;
     }
 
+    public Ponto getCentroide(){
+        return centroide;
+    }
+
     public String imprimeCentroide(){
         return centroide.toString();
     }
 
-    public void atualizaCentroide(){
+    public void calculaCentroide(){
 
         double sumX = 0;
         double sumY = 0;
@@ -49,11 +53,5 @@ public class Cluster {
         double mediaY = sumY / size;
 
         this.centroide = new Ponto(mediaX, mediaY);
-
-    }
-
-    public double calculaDistancia(Cluster c){
-
-        return centroide.calculaDistancia(c.centroide);
     }
 }
